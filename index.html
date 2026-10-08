@@ -39,32 +39,32 @@
             padding-bottom: 1rem;
         }
 
-        /* Zvýraznění správných odpovědí v tabulkách pro dark mode */
+        /* Zvýraznění správných odpovědí (ponecháno jako barevný highlight) */
         .ans-highlight {
             color: #38bdf8; /* text-sky-400 */
             font-weight: 600;
         }
         
-        /* Odborný styl textu (monospaced tagy) */
+        /* Odborný styl textu (monospaced tagy) bez modrého nádechu */
         .tech-term {
             font-family: monospace;
-            background-color: #334155;
+            background-color: #404040; /* neutral-700 */
             padding: 0.1rem 0.3rem;
             border-radius: 0.25rem;
-            color: #e2e8f0;
+            color: #ffffff;
         }
     </style>
 </head>
-<body class="bg-slate-900 font-sans text-slate-300 antialiased p-4 md:p-8 min-h-screen">
+<body class="bg-neutral-900 font-sans text-white antialiased p-4 md:p-8 min-h-screen">
 
     <div class="max-w-6xl mx-auto space-y-8">
         
         <!-- Hlavička -->
-        <header class="bg-slate-800 rounded-xl shadow-xl p-8 text-center border-t-8 border-sky-500 card-animate">
+        <header class="bg-neutral-800 rounded-xl shadow-xl p-8 text-center border-t-8 border-sky-500 card-animate">
             <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
                 Výběr řídicí jednotky pro různé aplikace
             </h1>
-            <p class="text-slate-400 text-lg max-w-3xl mx-auto">
+            <p class="text-white text-lg max-w-3xl mx-auto">
                 Kompletní interaktivní řešení úloh pro předmět Mikropočítače a sítě (SŠ). 
                 Obsahuje kategorizaci architektur, I/O bilanci, bezpečnostní audity (Safety/EMC) a analýzu TCO.
                 <strong>Tlačítky si postupně odkrývejte odborná řešení a dole si udělejte test.</strong>
@@ -72,62 +72,62 @@
         </header>
 
         <!-- Úloha 1: Architektury -->
-        <section class="bg-slate-800 p-6 md:p-8 rounded-xl shadow-lg card-animate delay-100 border-l-4 border-sky-500">
-            <h2 class="text-2xl font-bold text-sky-400 mb-4 border-b border-slate-700 pb-2">1. Základní pojmy a architektury řídicích jednotek</h2>
+        <section class="bg-neutral-800 p-6 md:p-8 rounded-xl shadow-lg card-animate delay-100 border-l-4 border-sky-500">
+            <h2 class="text-2xl font-bold text-sky-400 mb-4 border-b border-neutral-700 pb-2">1. Základní pojmy a architektury řídicích jednotek</h2>
             
             <div class="overflow-x-auto mb-6">
-                <table class="w-full text-left border-collapse text-sm">
+                <table class="w-full text-left border-collapse text-sm text-white">
                     <thead>
-                        <tr class="bg-slate-700 text-slate-200">
-                            <th class="p-3 border border-slate-600">Zkratka / Pojem</th>
-                            <th class="p-3 border border-slate-600">Česky / Anglicky</th>
-                            <th class="p-3 border border-slate-600">Základní charakteristika</th>
-                            <th class="p-3 border border-slate-600">Typický zástupce</th>
-                            <th class="p-3 border border-slate-600">Reálné nasazení</th>
+                        <tr class="bg-neutral-700 text-white">
+                            <th class="p-3 border border-neutral-600">Zkratka / Pojem</th>
+                            <th class="p-3 border border-neutral-600">Česky / Anglicky</th>
+                            <th class="p-3 border border-neutral-600">Základní charakteristika</th>
+                            <th class="p-3 border border-neutral-600">Typický zástupce</th>
+                            <th class="p-3 border border-neutral-600">Reálné nasazení</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">MCU</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Mikrokontrolér (Microcontroller Unit)</td>
-                            <td class="p-3 border border-slate-600">Integrovaný čip (CPU+RAM+Flash), deterministický běh bez OS.</td>
-                            <td class="p-3 border border-slate-600">ESP32, PIC, ATmega</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">IoT senzory, domácí spotřebiče</td>
+                        <tr class="hover:bg-neutral-700 transition">
+                            <td class="p-3 border border-neutral-600 font-bold text-white">MCU</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Mikrokontrolér (Microcontroller Unit)</td>
+                            <td class="p-3 border border-neutral-600">Integrovaný čip (CPU+RAM+Flash), deterministický běh bez OS.</td>
+                            <td class="p-3 border border-neutral-600">ESP32, PIC, ATmega</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">IoT senzory, domácí spotřebiče</td>
                         </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">MPU</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Mikroprocesor (Microprocessor Unit)</td>
-                            <td class="p-3 border border-slate-600">Samostatný procesor vyžadující externí RAM, běží na něm OS.</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">ARM Cortex-A, Intel Core</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Raspberry Pi, infotainment</td>
+                        <tr class="hover:bg-neutral-700 transition">
+                            <td class="p-3 border border-neutral-600 font-bold text-white">MPU</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Mikroprocesor (Microprocessor Unit)</td>
+                            <td class="p-3 border border-neutral-600">Samostatný procesor vyžadující externí RAM, běží na něm OS.</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">ARM Cortex-A, Intel Core</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Raspberry Pi, infotainment</td>
                         </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">Embedded</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Vestavěný systém</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Jednoúčelový systém (HW + SW) navržený přesně pro konkrétní zařízení.</td>
-                            <td class="p-3 border border-slate-600">Embedded PC, Custom PCB</td>
-                            <td class="p-3 border border-slate-600">Bílá technika, bankomaty</td>
+                        <tr class="hover:bg-neutral-700 transition">
+                            <td class="p-3 border border-neutral-600 font-bold text-white">Embedded</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Vestavěný systém</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Jednoúčelový systém (HW + SW) navržený přesně pro konkrétní zařízení.</td>
+                            <td class="p-3 border border-neutral-600">Embedded PC, Custom PCB</td>
+                            <td class="p-3 border border-neutral-600">Bílá technika, bankomaty</td>
                         </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">PLC</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Prog. logický automat (Prog. Logic Controller)</td>
-                            <td class="p-3 border border-slate-600">Automat pro cyklické deterministické řízení procesů, vysoká odolnost.</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Siemens S7-1200, WAGO</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Tovární a balicí linky</td>
+                        <tr class="hover:bg-neutral-700 transition">
+                            <td class="p-3 border border-neutral-600 font-bold text-white">PLC</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Prog. logický automat (Prog. Logic Controller)</td>
+                            <td class="p-3 border border-neutral-600">Automat pro cyklické deterministické řízení procesů, vysoká odolnost.</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Siemens S7-1200, WAGO</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Tovární a balicí linky</td>
                         </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">iPC</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Průmyslové PC (Industrial PC)</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Odolné PC (x86/x64), pasivní chlazení, běží OS + virtuální SoftPLC.</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Beckhoff IPC</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Strojové vidění, složité HMI</td>
+                        <tr class="hover:bg-neutral-700 transition">
+                            <td class="p-3 border border-neutral-600 font-bold text-white">iPC</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Průmyslové PC (Industrial PC)</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Odolné PC (x86/x64), pasivní chlazení, běží OS + virtuální SoftPLC.</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Beckhoff IPC</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Strojové vidění, složité HMI</td>
                         </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">Prog. relé</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Programovatelné relé (Smart Relay)</td>
-                            <td class="p-3 border border-slate-600">Zjednodušené kompaktní PLC pro méně náročné úlohy, nahrazuje stykače.</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Siemens LOGO!, Eaton easyE4</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Čerpací stanice, osvětlení</td>
+                        <tr class="hover:bg-neutral-700 transition">
+                            <td class="p-3 border border-neutral-600 font-bold text-white">Prog. relé</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Programovatelné relé (Smart Relay)</td>
+                            <td class="p-3 border border-neutral-600">Zjednodušené kompaktní PLC pro méně náročné úlohy, nahrazuje stykače.</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Siemens LOGO!, Eaton easyE4</td>
+                            <td class="p-3 border border-neutral-600 ans-highlight">Čerpací stanice, osvětlení</td>
                         </tr>
                     </tbody>
                 </table>
@@ -135,436 +135,14 @@
 
             <div class="bg-yellow-900/30 p-4 rounded-lg border border-yellow-700/50">
                 <h4 class="font-bold text-yellow-400 mb-2">🌟 Bonusová otázka: Letectví a determinismus</h4>
-                <p class="text-sm mb-3 text-slate-300">Proč se u systémů Fly-by-Wire upřednostňují jednoduché mikrořadiče s malou pamětí před moderními gigahertzovými procesory?</p>
+                <p class="text-sm mb-3 text-white">Proč se u systémů Fly-by-Wire upřednostňují jednoduché mikrořadiče s malou pamětí před moderními gigahertzovými procesory?</p>
                 <button onclick="toggleAnswer('ans-bonus1')" class="bg-yellow-700 hover:bg-yellow-600 text-white px-4 py-1.5 rounded text-sm font-semibold transition">Zobrazit řešení</button>
-                <div id="ans-bonus1" class="answer-box text-sm text-slate-200 px-4 bg-slate-800 mt-2 rounded border border-yellow-600/50">
+                <div id="ans-bonus1" class="answer-box text-sm text-white px-4 bg-neutral-800 mt-2 rounded border border-yellow-600/50">
                     Jde o absolutní záruku determinismu (Hard Real-Time). Běžný operační systém na vícejádrovém procesoru je příliš složitý, může dojít k deadlocku, preempci vláken nebo selhání jádra. Kód na jednoduchém MCU běží okamžitě z Flash paměti (bare-metal) v přesně definovaných taktech hodin. Jeho chování lze 100% matematicky předvídat a verifikovat.
                 </div>
             </div>
         </section>
 
         <!-- Úloha 2: Parametry a paměti -->
-        <section class="bg-slate-800 p-6 md:p-8 rounded-xl shadow-lg card-animate delay-200 border-l-4 border-emerald-500">
-            <h2 class="text-2xl font-bold text-emerald-400 mb-4 border-b border-slate-700 pb-2">2. Parametry, paměti a provozní odolnost (IP)</h2>
-            
-            <div class="grid md:grid-cols-2 gap-6 mb-6">
-                <!-- Paměti -->
-                <div class="bg-slate-850 p-4 rounded-lg border border-slate-700 bg-slate-900/50">
-                    <h3 class="font-bold text-lg mb-3 text-white">Typy pamětí</h3>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li><strong>RAM:</strong> Volatilní? <span class="ans-highlight">Ano</span> | Využití: <span class="ans-highlight">Rychlá pracovní paměť.</span></li>
-                        <li><strong>Flash:</strong> Volatilní? <span class="ans-highlight">Ne</span> | Využití: <span class="ans-highlight">Úložiště programu/firmwaru.</span></li>
-                        <li><strong>EEPROM:</strong> Volatilní? <span class="ans-highlight">Ne</span> | Využití: <span class="ans-highlight">Remanentní proměnné.</span></li>
-                    </ul>
-                    <hr class="my-3 border-slate-700">
-                    <p class="text-sm font-semibold mb-2 text-white">Otázka: Kam v PLC uložit motohodiny proti výpadku?</p>
-                    <button onclick="toggleAnswer('ans-mem')" class="bg-emerald-700 hover:bg-emerald-600 text-white px-3 py-1 rounded text-xs font-bold transition">Odpověď</button>
-                    <div id="ans-mem" class="answer-box text-sm px-3 bg-emerald-900/30 border border-emerald-700/50 mt-2 rounded text-slate-200">
-                        Do tzv. <strong>remanentní (Retain) paměti</strong>. Využívá se k tomu nezávislá EEPROM/FRAM, případně SRAM zálohovaná baterií či superkondenzátorem.
-                    </div>
-                </div>
-
-                <!-- Konstrukce a IP -->
-                <div class="bg-slate-850 p-4 rounded-lg border border-slate-700 bg-slate-900/50">
-                    <h3 class="font-bold text-lg mb-3 text-white">Krytí IP a iPC vs Kancelářské PC</h3>
-                    <p class="text-sm mb-2">Venkovní rozváděč na déšť a prach: <span class="ans-highlight">[X] IP65</span></p>
-                    <p class="text-sm italic text-slate-400 mb-3">6 = prachotěsné, 5 = tryskající voda.</p>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li><strong>Chlazení:</strong> iPC využívá <span class="ans-highlight">masivní pasivní hliníkový chladič</span> (fanless), obyčejné PC má větrák (nasává prach).</li>
-                        <li><strong>Napájení:</strong> iPC běží na průmyslových <span class="ans-highlight">24 V DC</span>, běžné PC na 230 V AC (ATX).</li>
-                        <li><strong>Montáž:</strong> iPC se uchycuje na <span class="ans-highlight">DIN lištu nebo do rozváděče</span>.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- RTOS vs Linux -->
-            <div class="bg-slate-850 p-4 rounded-lg border border-slate-700 bg-slate-900/50 mb-4">
-                <h4 class="font-bold mb-2 text-white">Hard vs. Soft Real-Time na E-Stopu lisu</h4>
-                <p class="text-sm mb-2">Proč nelze na nouzové zastavení do 5 ms použít běžné Raspberry Pi s Linuxem?</p>
-                <button onclick="toggleAnswer('ans-rtos')" class="bg-emerald-700 hover:bg-emerald-600 text-white px-3 py-1 rounded text-sm font-bold transition">Odpověď</button>
-                <div id="ans-rtos" class="answer-box text-sm px-4 bg-slate-800 mt-2 rounded border border-emerald-700/50 text-slate-200">
-                    Standardní Linux je preemptivní operační systém (Soft Real-Time). Zpracování přerušení může být pozdrženo vlákny obsluhujícími síť nebo disk. Může vzniknout latence desítky milisekund, což u bezpečnostní brzdy znamená fatální havárii stroje. PLC nebo MCU s RTOS zaručují tzv. <strong>Hard Real-Time</strong> – reakci v předvídatelném čase.
-                </div>
-            </div>
-
-            <div class="bg-yellow-900/30 p-4 rounded-lg border border-yellow-700/50">
-                <h4 class="font-bold text-yellow-400 mb-2">🌟 Bonusová otázka: Co znamená IP69K?</h4>
-                <button onclick="toggleAnswer('ans-bonus2')" class="bg-yellow-700 hover:bg-yellow-600 text-white px-4 py-1.5 rounded text-sm font-semibold transition">Zobrazit řešení</button>
-                <div id="ans-bonus2" class="answer-box text-sm text-slate-200 px-4 bg-slate-800 mt-2 rounded border border-yellow-600/50">
-                    Ochrana proti tryskající vysokotlaké a horké vodě (odolnost vůči mytí WAPkou). Typické pro <strong>potravinářství (mlékárny, jatka)</strong> a senzory na těžké stavební technice.
-                </div>
-            </div>
-        </section>
-
-        <!-- Úloha 3: Rozhodovací matice -->
-        <section class="bg-slate-800 p-6 md:p-8 rounded-xl shadow-lg card-animate delay-300 border-l-4 border-indigo-500">
-            <h2 class="text-2xl font-bold text-indigo-400 mb-4 border-b border-slate-700 pb-2">3. Rozhodovací matice platforem</h2>
-            
-            <div class="overflow-x-auto mb-6">
-                <table class="w-full text-left border-collapse text-sm">
-                    <thead>
-                        <tr class="bg-slate-700 text-slate-200">
-                            <th class="p-3 border border-slate-600 w-1/4">Kritérium hodnocení</th>
-                            <th class="p-3 border border-slate-600 w-1/4">Aplikace A: Termostat (10 tis. ks)</th>
-                            <th class="p-3 border border-slate-600 w-1/4">Aplikace B: Balicí linka 24/7</th>
-                            <th class="p-3 border border-slate-600 w-1/4">Aplikace C: AI kontrola 4K</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-slate-300">
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">Doporučená platforma</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">MCU / SoC (např. ESP32)</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Kompaktní PLC (S7-1200)</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Průmyslové PC (iPC)</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">Pořizovací cena HW</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Nízká (&lt; 500 Kč)</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Střední (15–30 tis. Kč)</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Vysoká (&gt; 50 tis. Kč)</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">Programovací jazyk</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">C / C++</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">IEC 61131-3 (LAD, ST)</td>
-                            <td class="p-3 border border-slate-600 ans-highlight">Python / C++ pod OS</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">Klíčový argument</td>
-                            <td class="p-3 border border-slate-600">Spotřeba energie pro běh z baterie, integrace Wi-Fi, masová cena.</td>
-                            <td class="p-3 border border-slate-600">Odolnost proti rušení (EMC), rozváděčové provedení, snadná údržba.</td>
-                            <td class="p-3 border border-slate-600">Výpočetní výkon NPU/GPU potřebný pro běh neuronové sítě a 4K videa.</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-600 font-bold text-white">Rizika špatné volby</td>
-                            <td class="p-3 border border-slate-600 text-red-400">PLC nelze napájet baterií a 10 000 kusů PLC by projekt zničilo.</td>
-                            <td class="p-3 border border-slate-600 text-red-400">MCU deska by nepřežila rušení stykačů. Údržbář neumí C++.</td>
-                            <td class="p-3 border border-slate-600 text-red-400">Běžné PLC nemá GPU, RAM ani výpočetní výkon na analýzu obrazu.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="bg-yellow-900/30 p-4 rounded-lg border border-yellow-700/50">
-                <h4 class="font-bold text-yellow-400 mb-2">🌟 Bonusová otázka: Co je SoftPLC?</h4>
-                <button onclick="toggleAnswer('ans-bonus3')" class="bg-yellow-700 hover:bg-yellow-600 text-white px-4 py-1.5 rounded text-sm font-semibold transition">Zobrazit řešení</button>
-                <div id="ans-bonus3" class="answer-box text-sm text-slate-200 px-4 bg-slate-800 mt-2 rounded border border-yellow-600/50">
-                    <strong>SoftPLC</strong> je softwarová emulace chování hardwarového PLC běžící uvnitř běžného PC (např. Beckhoff TwinCAT). Používá hypervisor "pod" Windows/Linuxem, který garantuje vyhrazení např. jednoho jádra procesoru čistě pro real-time úlohy. Pokud běžný OS "spadne" do BSOD (modrá smrt), řídicí jádro linky běží nerušeně dál.
-                </div>
-            </div>
-        </section>
-
-        <!-- Úloha 4: I/O Bilance -->
-        <section class="bg-slate-800 p-6 md:p-8 rounded-xl shadow-lg card-animate delay-400 border-l-4 border-amber-500">
-            <h2 class="text-2xl font-bold text-amber-500 mb-4 border-b border-slate-700 pb-2">4. I/O bilance a návrh pro čerpací stanici</h2>
-            
-            <div class="overflow-x-auto mb-6">
-                <table class="w-full text-left border-collapse text-sm">
-                    <thead>
-                        <tr class="bg-slate-700 text-slate-200">
-                            <th class="p-2 border-b-2 border-slate-600">Typ signálu</th>
-                            <th class="p-2 border-b-2 border-slate-600">Základ (ks)</th>
-                            <th class="p-2 border-b-2 border-slate-600">Popis periferií</th>
-                            <th class="p-2 border-b-2 border-slate-600 text-right text-amber-400">Po rezervě (+20 %)</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-slate-300">
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-2 border-b border-slate-700 font-bold text-white">Digitální vstup (DI)</td>
-                            <td class="p-2 border-b border-slate-700 ans-highlight">4</td>
-                            <td class="p-2 border-b border-slate-700">3x plováky, 1x termistor</td>
-                            <td class="p-2 border-b border-slate-700 text-right ans-highlight text-amber-400">5 (volí se modul 8 DI)</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-2 border-b border-slate-700 font-bold text-white">Reléový výstup (DO)</td>
-                            <td class="p-2 border-b border-slate-700 ans-highlight">2</td>
-                            <td class="p-2 border-b border-slate-700">Stykače čerpadel (230 V)</td>
-                            <td class="p-2 border-b border-slate-700 text-right ans-highlight text-amber-400">3</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-2 border-b border-slate-700 font-bold text-white">Tranzist. výstup (DO)</td>
-                            <td class="p-2 border-b border-slate-700 ans-highlight">1</td>
-                            <td class="p-2 border-b border-slate-700">Maják 24 V DC</td>
-                            <td class="p-2 border-b border-slate-700 text-right ans-highlight text-amber-400">2</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-2 border-b border-slate-700 font-bold text-white">Analogový vstup (AI)</td>
-                            <td class="p-2 border-b border-slate-700 ans-highlight">1</td>
-                            <td class="p-2 border-b border-slate-700">Sonda hladiny 4–20 mA</td>
-                            <td class="p-2 border-b border-slate-700 text-right ans-highlight text-amber-400">2</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-2 border-b border-slate-700 font-bold text-white">Analogový výstup (AO)</td>
-                            <td class="p-2 border-b border-slate-700 ans-highlight">1</td>
-                            <td class="p-2 border-b border-slate-700">Měnič otáček 0–10 V</td>
-                            <td class="p-2 border-b border-slate-700 text-right ans-highlight text-amber-400">2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-4 mb-4">
-                <div class="bg-amber-900/20 p-4 rounded border border-amber-700/50 text-sm">
-                    <h4 class="font-bold mb-2 text-amber-400">Navržený Hardware:</h4>
-                    <ul class="space-y-1 text-slate-300">
-                        <li><strong>Jednotka:</strong> <span class="ans-highlight">Siemens LOGO! 24RCE</span> (nebo S7-1200)</li>
-                        <li><strong>Moduly:</strong> <span class="ans-highlight">AM2 (pro 4-20mA) a AM2 AQ (pro 0-10V)</span></li>
-                        <li><strong>Komunikace:</strong> <span class="ans-highlight">Ethernet s Modbus TCP</span>, napojený na LTE router.</li>
-                        <li><strong>Zdroje:</strong> Napájení 24 V DC ze spínaného zdroje na DIN liště.</li>
-                    </ul>
-                </div>
-                <div class="bg-amber-900/20 p-4 rounded border border-amber-700/50 text-sm">
-                    <h4 class="font-bold mb-2 text-amber-400">Ověření instalace:</h4>
-                    <p class="text-slate-300"><strong>Spínání 230V stykačů:</strong> <span class="ans-highlight text-red-400">VŽDY přes oddělovací pomocné relé!</span> Cívka tvoří indukční zátěž, zpětné špičky by opálily kontakty přímo v PLC.</p>
-                    <p class="mt-2 text-slate-300"><strong>Rozváděč:</strong> IP65. Pro mrazy -20°C je nutné <strong>PTC topné tělísko s termostatem</strong> proti kondenzační vlhkosti.</p>
-                </div>
-            </div>
-
-            <div class="bg-yellow-900/30 p-4 rounded-lg border border-yellow-700/50">
-                <h4 class="font-bold text-yellow-400 mb-2">🌟 Bonus: 4-20 mA vs 0-10V a ultrazvuk</h4>
-                <button onclick="toggleAnswer('ans-bonus4')" class="bg-yellow-700 hover:bg-yellow-600 text-white px-4 py-1.5 rounded text-sm font-semibold transition">Zobrazit řešení</button>
-                <div id="ans-bonus4" class="answer-box text-sm text-slate-200 px-4 bg-slate-800 mt-2 rounded border border-yellow-600/50">
-                    <ul class="list-disc pl-4 space-y-2">
-                        <li><strong>Proč ne ultrazvuk:</strong> Čerpadla tvoří v jímce hustou pěnu. Pěna ultrazvuk neodráží, ale pohlcuje (senzor selže). Používá se ponorná hydrostatická sonda na dno.</li>
-                        <li><strong>Proč 4-20 mA:</strong> Nevykazuje chybu úbytku napětí na dlouhém kabelu. Klíčová je <strong>živá nula</strong> (při překousnutí kabelu naměří systém 0 mA a ihned vyhlásí poplach. U 0-10V nelze poznat poruchu kabelu od prázdné nádrže).</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Úloha 5: Audit -->
-        <section class="bg-slate-800 p-6 md:p-8 rounded-xl shadow-lg card-animate delay-500 border-l-8 border-red-500">
-            <h2 class="text-2xl font-bold text-red-500 mb-4 border-b border-slate-700 pb-2">5. Technický audit nevhodného návrhu lisu (Arduino)</h2>
-            <p class="mb-4 text-sm text-slate-400">Analýza amatérského řešení (Arduino Uno + 3D tisk + hobby relé) pro těžký hydraulický lis.</p>
-            
-            <div class="overflow-x-auto mb-6">
-                <table class="w-full text-left border-collapse text-sm">
-                    <thead>
-                        <tr class="bg-red-900/30 text-red-400">
-                            <th class="p-3 border border-red-900/50 w-1/4">Oblast auditu</th>
-                            <th class="p-3 border border-red-900/50 w-1/2">Mechanismus selhání</th>
-                            <th class="p-3 border border-red-900/50 w-1/4">Následek pro stroj</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-slate-300">
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-700 font-bold text-white">EMC odolnost</td>
-                            <td class="p-3 border border-slate-700 ans-highlight text-red-300">Absence optického oddělení a varistorů. Špičky z cívek ventilů zaruší MCU.</td>
-                            <td class="p-3 border border-slate-700">Zacyklení (reset) MCU, náhodné pohyby lisu.</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-700 font-bold text-white">Mechanika (PLA)</td>
-                            <td class="p-3 border border-slate-700 ans-highlight text-red-300">PLA má teplotu skelného přechodu 60 °C. Horký lis plast rozteče, vibrace jej rozdrtí.</td>
-                            <td class="p-3 border border-slate-700">Odpadnutí řízení, zkrat, požár.</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-700 font-bold text-white">DuPont konektory</td>
-                            <td class="p-3 border border-slate-700 ans-highlight text-red-300">Vodiče bez šroubové aretace se v průmyslu otřesy vyklepou a zoxidují.</td>
-                            <td class="p-3 border border-slate-700">Ztráta kontroly nad koncovými spínači.</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-700 font-bold text-red-500">Bezpečnost (Safety)</td>
-                            <td class="p-3 border border-slate-700 font-bold text-red-500 ans-highlight">E-STOP okruh nesmí být závislý na běhu softwaru. Pokud se čip kousne, přerušení nefunguje.</td>
-                            <td class="p-3 border border-slate-700 font-bold text-red-500">Selhání nouzového zastavení – fatální zranění.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="bg-red-900/20 p-4 rounded border border-red-800 text-sm mb-4">
-                <h4 class="font-bold text-red-400 mb-2">Správné nápravné řešení:</h4>
-                <ul class="space-y-2 text-slate-300">
-                    <li><strong>Jednotka:</strong> Osadit kompaktní PLC (S7-1200) do oceloplechového rozváděče (Rittal).</li>
-                    <li><strong>Safety okruh:</strong> Hřibové tlačítko musí být dvoukanálové a zapojené do <strong>hardwarového bezpečnostního relé (např. Pilz)</strong>. Relé nezávisle na PLC fyzicky odepne napájení všech stykačů.</li>
-                </ul>
-            </div>
-
-            <div class="bg-yellow-900/30 p-4 rounded-lg border border-yellow-700/50">
-                <h4 class="font-bold text-yellow-400 mb-2">🌟 Bonus: Proč shoří 10A relé u 0.5A stykače?</h4>
-                <button onclick="toggleAnswer('ans-bonus5')" class="bg-yellow-700 hover:bg-yellow-600 text-white px-4 py-1.5 rounded text-sm font-semibold transition">Zobrazit řešení</button>
-                <div id="ans-bonus5" class="answer-box text-sm text-slate-200 px-4 bg-slate-800 mt-2 rounded border border-yellow-600/50">
-                    Levná hobby relé jsou dimenzována na čistě odporovou (rezistivní) zátěž. Cívka stykače je vysoce <strong>indukční zátěž</strong>. Při rozpojení vytvoří indukčnost elektrický oblouk (jiskru). Nekvalitní slitina kontaktů hobby relé se roztaví a kontakty se trvale <strong>přivaří</strong> k sobě.
-                </div>
-            </div>
-        </section>
-
-        <!-- Úloha 6: TCO -->
-        <section class="bg-slate-800 p-6 md:p-8 rounded-xl shadow-lg card-animate delay-600 border-l-4 border-purple-500">
-            <h2 class="text-2xl font-bold text-purple-400 mb-4 border-b border-slate-700 pb-2">6. Ekonomika TCO a životní cyklus</h2>
-            
-            <div class="overflow-x-auto mb-4">
-                <table class="w-full text-left border-collapse text-sm">
-                    <thead>
-                        <tr class="bg-purple-900/30 text-purple-300">
-                            <th class="p-3 border border-purple-900/50 w-1/3">Aspekt životního cyklu (TCO)</th>
-                            <th class="p-3 border border-purple-900/50 w-1/3">Var. 1: Custom MCU (2 500 Kč)</th>
-                            <th class="p-3 border border-purple-900/50 w-1/3">Var. 2: PLC standard (22 000 Kč)</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-slate-300">
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-700 font-bold text-white">Dostupnost náhradních dílů</td>
-                            <td class="p-3 border border-slate-700 text-red-400 font-semibold">Záhy nulová (PCB se ztratí).</td>
-                            <td class="p-3 border border-slate-700 text-emerald-400 font-semibold">Vysoká (výrobci garantují migrace).</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-700 font-bold text-white">Servis podnikovým elektrikářem</td>
-                            <td class="p-3 border border-slate-700 text-red-400 font-semibold">Nemožný (zkompilované C++).</td>
-                            <td class="p-3 border border-slate-700 text-emerald-400 font-semibold">Snadný (čtení žebříčku, LED chyby).</td>
-                        </tr>
-                        <tr class="hover:bg-slate-750 transition">
-                            <td class="p-3 border border-slate-700 font-bold text-white">Odstávka při poruše CPU</td>
-                            <td class="p-3 border border-slate-700 text-red-400 font-semibold">Měsíce (nutný vývoj nové desky).</td>
-                            <td class="p-3 border border-slate-700 text-emerald-400 font-semibold">Hodiny (výměna modulu + SD karta).</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="bg-purple-900/20 p-4 rounded border border-purple-800 text-sm mb-4 text-slate-300">
-                <p><strong>Závěr:</strong> Přes vyšší počáteční investici (CAPEX) se volí <strong>Varianta 2 (PLC)</strong>. Finanční ztráty z prostojů u profi linky (OPEX) jsou extrémní. Vyhneme se také smrtícímu <em>Vendor lock-in</em> (závislost na jediném programátorovi, který má zdrojový kód z Var 1).</p>
-            </div>
-
-            <div class="bg-yellow-900/30 p-4 rounded-lg border border-yellow-700/50">
-                <h4 class="font-bold text-yellow-400 mb-2">🌟 Bonus: MTBF a Arrheniovo pravidlo</h4>
-                <button onclick="toggleAnswer('ans-bonus6')" class="bg-yellow-700 hover:bg-yellow-600 text-white px-4 py-1.5 rounded text-sm font-semibold transition">Zobrazit řešení</button>
-                <div id="ans-bonus6" class="answer-box text-sm text-slate-200 px-4 bg-slate-800 mt-2 rounded border border-yellow-600/50">
-                    <strong>MTBF</strong> (Mean Time Between Failures) je průměrná doba do poruchy. Podle <strong>Arrheniova pravidla</strong> pro elektrolytické kondenzátory platí: <strong>každé zvýšení trvalé teploty o 10 °C zkrátí životnost elektroniky na polovinu</strong>. Proto je chlazení rozváděče naprosto klíčové.
-                </div>
-            </div>
-        </section>
-
-        <!-- ZÁVĚREČNÝ KVÍZ -->
-        <section class="bg-slate-800 p-6 md:p-8 rounded-xl shadow-lg border-t-8 border-teal-500 card-animate delay-700">
-            <h2 class="text-3xl font-bold text-teal-400 mb-6 text-center">📝 Závěrečný test znalostí</h2>
-            <p class="text-center text-slate-400 mb-8">Vyzkoušejte si, co jste si zapamatovali. Vyberte vždy jednu správnou odpověď.</p>
-            
-            <div id="quiz-container" class="space-y-8 max-w-3xl mx-auto">
-                <!-- Otázka 1 -->
-                <div class="quiz-question bg-slate-900/50 p-6 rounded-lg border border-slate-700" data-correct="B">
-                    <h3 class="font-bold text-lg text-white mb-4">1. Který systém zaručuje odezvu v přesně definovaném čase (Hard Real-Time)?</h3>
-                    <div class="space-y-3">
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'A')">A) Průmyslové PC s běžným OS Linux</button>
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'B')">B) Průmyslové PLC nebo mikrokontrolér s RTOS</button>
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'C')">C) Kancelářský počítač s OS Windows 11</button>
-                    </div>
-                </div>
-
-                <!-- Otázka 2 -->
-                <div class="quiz-question bg-slate-900/50 p-6 rounded-lg border border-slate-700" data-correct="A">
-                    <h3 class="font-bold text-lg text-white mb-4">2. Jaká je hlavní výhoda proudové smyčky 4–20 mA oproti napětí 0–10 V u senzorů?</h3>
-                    <div class="space-y-3">
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'A')">A) Netrpí úbytkem napětí na dlouhém vedení a umí detekovat přetržení vodiče (živá nula).</button>
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'B')">B) Lze po ní přenášet obraz v HD rozlišení.</button>
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'C')">C) Spotřebovává výrazně méně elektrické energie.</button>
-                    </div>
-                </div>
-
-                <!-- Otázka 3 -->
-                <div class="quiz-question bg-slate-900/50 p-6 rounded-lg border border-slate-700" data-correct="C">
-                    <h3 class="font-bold text-lg text-white mb-4">3. Jak musí být v průmyslu správně zapojen okruh nouzového zastavení lisu (E-STOP)?</h3>
-                    <div class="space-y-3">
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'A')">A) Přímo na softwarový digitální vstup PLC, které programově vypne výstupy.</button>
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'B')">B) Přes čínský hobby relé modul z e-shopu napojený na Arduino.</button>
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'C')">C) Hardwarově přes certifikované bezpečnostní relé, které nezávisle na CPU fyzicky odepne napájení stykačů.</button>
-                    </div>
-                </div>
-
-                <!-- Otázka 4 -->
-                <div class="quiz-question bg-slate-900/50 p-6 rounded-lg border border-slate-700" data-correct="A">
-                    <h3 class="font-bold text-lg text-white mb-4">4. Co říká Arrheniovo pravidlo o životnosti elektroniky (MTBF) v rozváděči?</h3>
-                    <div class="space-y-3">
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'A')">A) Zvýšení trvalé teploty okolí o 10 °C zkrátí životnost elektrolytických kondenzátorů o polovinu.</button>
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'B')">B) Prach a vlhkost zvyšují spolehlivost pasivních součástek.</button>
-                        <button class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent" onclick="checkAnswer(this, 'C')">C) Čím vyšší proud teče přes hobby relé, tím déle vydrží nespéct se.</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="quiz-result" class="text-center mt-8 hidden">
-                <h3 class="text-2xl font-bold text-teal-400 mb-2">Hodnocení</h3>
-                <p id="quiz-score-text" class="text-xl text-white">Máte <span id="quiz-score" class="text-3xl text-teal-300">0</span> ze 4 správně!</p>
-                <button onclick="resetQuiz()" class="mt-4 bg-slate-700 hover:bg-slate-600 text-white px-6 py-2 rounded font-bold transition">Zkusit test znovu</button>
-            </div>
-        </section>
-
-        <footer class="text-center text-slate-500 text-sm pb-8 pt-4">
-            Aplikace vytvořena pro podporu výuky odborných elektrotechnických předmětů (SŠ).
-        </footer>
-
-    </div>
-
-    <!-- Skripty -->
-    <script>
-        // Otevírání/Zavírání odpovědí v textu
-        function toggleAnswer(id) {
-            const el = document.getElementById(id);
-            if (el.classList.contains('open')) {
-                el.classList.remove('open');
-            } else {
-                el.classList.add('open');
-            }
-        }
-
-        // Logika pro Kvíz
-        let score = 0;
-        let answeredQuestions = 0;
-        const totalQuestions = 4;
-
-        function checkAnswer(btnElement, selectedOption) {
-            const questionDiv = btnElement.closest('.quiz-question');
-            const correctOption = questionDiv.getAttribute('data-correct');
-            const allButtons = questionDiv.querySelectorAll('button');
-
-            // Zamezení vícenásobnému kliknutí
-            if(questionDiv.classList.contains('answered')) return;
-            questionDiv.classList.add('answered');
-
-            allButtons.forEach(btn => {
-                btn.disabled = true;
-                btn.classList.remove('hover:bg-slate-600');
-                btn.classList.add('opacity-70', 'cursor-not-allowed');
-                
-                const btnLetter = btn.innerText.charAt(0);
-                if (btnLetter === correctOption) {
-                    // Zvýraznění správné odpovědi
-                    btn.classList.add('border-teal-500', 'bg-teal-900/40', 'text-teal-300');
-                    btn.classList.remove('bg-slate-700');
-                } else if (btn === btnElement && selectedOption !== correctOption) {
-                    // Zvýraznění špatné kliknuté odpovědi
-                    btn.classList.add('border-red-500', 'bg-red-900/40', 'text-red-300');
-                    btn.classList.remove('bg-slate-700');
-                }
-            });
-
-            if (selectedOption === correctOption) {
-                score++;
-            }
-            
-            answeredQuestions++;
-            
-            // Kontrola konce testu
-            if (answeredQuestions === totalQuestions) {
-                document.getElementById('quiz-result').classList.remove('hidden');
-                document.getElementById('quiz-score').innerText = score;
-            }
-        }
-
-        function resetQuiz() {
-            score = 0;
-            answeredQuestions = 0;
-            document.getElementById('quiz-result').classList.add('hidden');
-            
-            const questions = document.querySelectorAll('.quiz-question');
-            questions.forEach(q => {
-                q.classList.remove('answered');
-                const buttons = q.querySelectorAll('button');
-                buttons.forEach(btn => {
-                    btn.disabled = false;
-                    btn.className = "w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition border-2 border-transparent text-slate-300";
-                });
-            });
-        }
-    </script>
-</body>
-</html>
+        <section class="bg-neutral-800 p-6 md:p-8 rounded-xl shadow-lg card-animate delay-200 border-l-4 border-emerald-500">
+            <h2 class="text-2xl font-bold text-emerald-400 mb-4 border-b border-neutral-700 pb-2">2. Param
